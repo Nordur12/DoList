@@ -1,0 +1,251 @@
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, #ff8c42, #007b82);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+.mobile-form{
+    display: none;
+}
+/* Desktop Layout */
+.container {
+    display: flex;
+    background: #1e1e2e;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 140, 66, 0.8);
+    overflow: hidden;
+    width: 800px;
+    height: 400px;
+}
+
+/* Left Section (Sign-in) */
+.signin-section {
+    background: url('../images/Signup.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Overlay for Better Text Readability */
+.signin-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.075);
+    z-index: 0;
+}
+
+/* Ensure Text Appears on Top */
+.signin-section h1, 
+.signin-section h2, 
+.login-btn {
+    position: relative;
+    z-index: 1;
+}
+
+.signin-section h1 {
+    color: #ff8c42;
+    top: -30px;
+    margin-bottom: 190px;
+}
+
+.signin-section h2 {
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 7px rgb(0, 0, 0);
+}
+
+.login-btn {
+    background: #007b82;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 200%;
+    font-size: 16px;
+    right: 50%;
+}
+
+.login-btn:hover {
+    background: #ff8c42;
+}
+
+/* Right Section (Signup) */
+.right-section {
+    padding: 30px;
+    width: 50%;
+    text-align: center;
+    background: #12121a;
+}
+
+.signup-container h2 {
+    color: #ff8c42;
+    font-size: 24px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #2d2d44;
+    color: #fff;
+}
+
+.signup-btn {
+    background: #007b82;
+    color: #fff;
+    padding: 10px;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;  /* Ensure it takes full width */
+    margin: 20px auto 0;  /* Moves button lower and centers it */
+    text-align: center;
+    left: 50%;
+}
+
+
+button:hover {
+    background: #ff8c42;
+}
+
+/* MOBILE RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    /* Hide Desktop Layout */
+    .container {
+        display: none;
+    }
+
+    /* Show Mobile Layout */
+    .mobile-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100vh;
+        overflow-y: auto; /* Makes the container scrollable */
+        padding: 20px;
+    }
+
+    body {
+        background: linear-gradient(135deg, #ff8c42, #007b82);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        margin: 0;
+    }
+
+    /* "Welcome to DoList!" H1 */
+    .mobile-form h1 {
+        color: #fcfcfc;
+        font-size: 26px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 7px rgba(7, 7, 7, 0.425);
+    }
+
+   /* Form Container */
+    .form-container {
+        background: url('../images/Signup.jpg') no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        min-height: 60vh; 
+        max-height: 80vh;
+        position: fixed;
+        bottom: 0;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-clip: padding-box;
+    }
+
+
+
+
+
+    /* Input Fields */
+    .form-container input {
+        width: 90%;
+        padding: 12px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        background: #00000080;
+        font-size: 16px;
+        text-align: left;
+    }
+    .form-container input::placeholder {
+        color: rgb(255, 255, 255);
+        opacity: 1; /* Ensures full opacity on some browsers */
+    }
+
+    /* Signup Button */
+    .signup-btn {
+        width: 50%;
+        padding: 12px;
+        background: #007b82;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .signup-btn:hover {
+        background: #ff8c42;
+    }
+
+    /* "Already have an account?" H2 */
+    .form-container h2 {
+        color: #ff8c42;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 150px;
+    }
+
+    /* Sign In Button */
+    .signin-btn {
+        width: 50%;
+        padding: 12px;
+        background: #4c6ef5;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .signin-btn:hover {
+        background: #3b5bdb;
+    }
+}
+
